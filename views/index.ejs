@@ -1,0 +1,27 @@
+<%- include("partials/header")%>
+<%- include("partials/nav")%>
+
+  <div class="allblogs w-[90%] h-screen mx-auto bg-slate-200 p-5 flex flex-col gap-4">
+   
+    <%allBlogs.forEach((single)=>{%>
+      <a href="/blogdescription/<%=single._id%>">
+      <div class="singleblog flex gap-5 bg-white p-4">
+        <div class="img w-[30%] h-[160px] bg-blue-500">
+         <img class="h-full w-full object-cover" src="<%=single.blogImage%>" alt="">
+        </div>
+        <div class="details w-[70%]">
+          <div>
+          <h1 class="text-3xl"><%=single.title.slice(0,15)%>......</h1>
+          <p class="pb-2"><%=single.createdAt.toString().slice(0,15)%></p>
+        
+         </div>
+         <p><%=single.description.slice(0,300)%>......<spane class="text-blue-500">Read More</spane></p>
+        </div>
+      </div>
+    </a>
+    <%})%>
+    
+  </div>
+
+<%- include("partials/footer")%>
+

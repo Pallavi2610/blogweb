@@ -1,0 +1,16 @@
+<%- include("partials/header") %>
+<%- include("partials/nav")%>
+
+<div class="rappper h-[80%] w-full flex items-center justify-center">
+<form class="w-1/2 flex flex-col gap-3" action="/users/register" method="post">
+    <h1 class="text-2xl font-medium">Register Page</h1>
+    <input class="w-full rounded-md boder border-2 border-black" type="text" placeholder="Enter you fullname" name="fullname">
+    <input class="w-full rounded-md boder border-2 border-black" type="text" placeholder="Enter you username" name="username">
+    <input class="w-full rounded-md boder border-2 border-black" type="text" placeholder="Enter you email" name="email">
+    <input class="w-full rounded-md boder border-2 border-black" type="text" placeholder="Enter you password" name="password">
+    <button class="w-max bg-zinc-300 px-4 py-2 rounded-md">Register</button>
+
+</form>
+</div>
+
+    <%- include("partials/footer") %>

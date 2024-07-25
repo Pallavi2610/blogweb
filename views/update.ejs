@@ -1,0 +1,14 @@
+<%- include("partials/header") %>
+<%- include("partials/nav")%>
+
+<div class="w-full h-[90vh] bg-red-400 flex items-center justify-center overflow-auto">
+    
+ <form class="flex flex-col gap-4 w-1/2 " action="/users/updateBlog/<%=currentblog._id%>" method="post">
+   <h1 class="text-2xl">Update Bloge</h1>
+    <input class="rounded-md py-1"  type="text" value="<%=currentblog.title%>" placeholder="Blog Title" name="title">
+    <textarea  class="rounded-md py-2" placeholder="<%=currentblog.description%>"    name="description"></textarea>
+    <input class="rounded-md py-1" type="text" placeholder="Blog image Url" value="<%=currentblog.blogImage%>"   name="blogImage">
+    <button class="w-max bg-green-300 px-4 py-2 rounded-md font-semibold">Update Blog</button>
+ </form>
+</div>
+    <%- include("partials/footer") %>

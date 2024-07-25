@@ -1,0 +1,13 @@
+<%- include("partials/header") %>
+<%- include("partials/nav")%>
+
+<div class="w-full h-[90vh] bg-red-400 flex items-center justify-center overflow-auto">
+ <form class="flex flex-col gap-4 w-1/2 " action="/users/createBlog" method="post">
+   <h1 class="text-2xl">Create Bloge</h1>
+    <input class="rounded-md py-1"  type="text" placeholder="Blog Title" name="title">
+    <textarea  class="rounded-md py-2" placeholder="Blog Description" name="description"></textarea>
+    <input class="rounded-md py-1" type="text" placeholder="Blog image Url" name="blogImage">
+    <button class="w-max bg-zinc-300 px-4 py-2 rounded-md">Create Blog</button>
+ </form>
+</div>
+    <%- include("partials/footer") %>
